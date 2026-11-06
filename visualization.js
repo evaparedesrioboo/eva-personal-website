@@ -64,7 +64,12 @@ svg.append("g")
     .call(d3.axisLeft(yScale));
 
 
-
+// adding the chart title
+svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", 20)
+    .attr("text-anchor", "middle")
+    .text("A Week in My Figure Skating Life");
 
 
 
