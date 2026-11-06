@@ -29,3 +29,19 @@ const svg = d3.select("#myChart")
     .attr("width", width)
     .attr("height", height);
 
+
+// creating the X scale for activity names
+const xScale = d3.scaleBand()
+    .domain(data.map(d => d.activity))
+    .range([margin.left, width - margin.right])
+    .padding(0.2);
+
+// creating the Y scale for hours
+const yScale = d3.scaleLinear()
+    .domain([0, 10])
+    .range([height - margin.bottom, margin.top]);
+
+
+
+
+
