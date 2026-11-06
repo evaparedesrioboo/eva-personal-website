@@ -19,7 +19,7 @@ const margin = {
     top: 40,
     right: 30,
     bottom: 70,
-    left: 60
+    left: 80
 };
 
 
@@ -70,6 +70,14 @@ svg.append("text")
     .attr("y", 20)
     .attr("text-anchor", "middle")
     .text("A Week in My Figure Skating Life");
+
+// adding the Y axis label
+svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2)
+    .attr("y", 20)
+    .attr("text-anchor", "middle")
+    .text("Hours per Week");
 
 
 
