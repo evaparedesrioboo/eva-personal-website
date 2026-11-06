@@ -63,6 +63,8 @@ img {
     border-radius: 12px;
     display: block;
     margin: 20px auto;
+}.profile-photo {
+    width: 280px;
 }
 
 /* Footer */
