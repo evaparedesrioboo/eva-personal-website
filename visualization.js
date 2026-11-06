@@ -41,7 +41,16 @@ const yScale = d3.scaleLinear()
     .domain([0, 10])
     .range([height - margin.bottom, margin.top]);
 
-
+// creating the bars
+svg.selectAll("rect")
+    .data(data)
+    .enter()
+    .append("rect")
+    .attr("x", d => xScale(d.activity))
+    .attr("y", d => yScale(d.hours))
+    .attr("width", xScale.bandwidth())
+    .attr("height", d => height - margin.bottom - yScale(d.hours))
+    .attr("fill", "#77A6A1");
 
 
 
