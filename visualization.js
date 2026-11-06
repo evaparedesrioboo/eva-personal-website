@@ -52,5 +52,19 @@ svg.selectAll("rect")
     .attr("height", d => height - margin.bottom - yScale(d.hours))
     .attr("fill", "#77A6A1");
 
+// adding the X axis
+svg.append("g")
+    .attr("transform", `translate(0, ${height - margin.bottom})`)
+    .call(d3.axisBottom(xScale));
+
+
+// adding the Y axis
+svg.append("g")
+    .attr("transform", `translate(${margin.left}, 0)`)
+    .call(d3.axisLeft(yScale));
+
+
+
+
 
 
